@@ -1,0 +1,463 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    gap: 1.5rem;
+    padding: 0;
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.headerIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .headerIcon {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.iconContainer {
+  padding: 0.75rem;
+  background: linear-gradient(to right, #ef4444, #ec4899);
+  border-radius: 9999px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+.description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .description {
+    max-width: 32rem;
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+
+/* Features grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.featureCard {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.featureCard:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 768px) {
+  .featureCard:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.featureCard.selected {
+  outline: 2px solid #ef4444;
+}
+
+.featureContent {
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .featureContent {
+    padding: 1.5rem;
+  }
+}
+
+.featureIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .featureIcon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.featureTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .featureTitle {
+    font-size: 1rem;
+  }
+}
+
+.featureDescription {
+  font-size: 0.75rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .featureDescription {
+    font-size: 0.875rem;
+  }
+}
+
+/* Chat interface */
+.chatGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .chatGrid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.chatCard {
+  order: 1;
+}
+
+@media (min-width: 1024px) {
+  .chatCard {
+    order: 0;
+  }
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .chatHeader {
+    font-size: 1rem;
+  }
+}
+
+.messagesArea {
+  height: 20rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .messagesArea {
+    height: 24rem;
+    padding: 1rem;
+  }
+}
+
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .messagesContainer {
+    gap: 1rem;
+  }
+}
+
+.messageWrapper {
+  display: flex;
+}
+
+.messageWrapper.user {
+  justify-content: flex-end;
+}
+
+.messageWrapper.assistant {
+  justify-content: flex-start;
+}
+
+.message {
+  max-width: 85%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 480px) {
+  .message {
+    max-width: 80%;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+.message.user {
+  background-color: #ef4444;
+  color: white;
+}
+
+.message.assistant {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.messageHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.messageRole {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .messageRole {
+    font-size: 0.875rem;
+  }
+}
+
+.messageContent {
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .messageContent {
+    font-size: 0.875rem;
+  }
+}
+
+.loadingMessage {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.loadingContent {
+  background-color: #f3f4f6;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .loadingContent {
+    padding: 0.75rem;
+  }
+}
+
+.loadingHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .loadingHeader {
+    font-size: 0.875rem;
+  }
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .inputForm {
+    flex-direction: row;
+  }
+}
+
+.inputField {
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  order: 0;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    order: 1;
+  }
+}
+
+.sidebarContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .sidebarContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebarContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+.quickActionButton {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+  height: auto;
+  padding: 0.5rem;
+  background: transparent;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .quickActionButton {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+.quickActionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quickActionTitle {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .quickActionTitle {
+    font-size: 0.875rem;
+  }
+}
+
+/* Statistics */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+.statCard {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .statCard {
+    padding: 1rem;
+  }
+}
+
+.statIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 auto 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .statIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .statValue {
+    font-size: 1.5rem;
+  }
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+@media (min-width: 768px) {
+  .statLabel {
+    font-size: 0.875rem;
+  }
+}

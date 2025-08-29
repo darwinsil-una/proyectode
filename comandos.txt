@@ -1,0 +1,22 @@
+if (Test-Path ".\node_modules") { Remove-Item ".\node_modules" -Recurse -Force }
+if (Test-Path ".\package-lock.json") { Remove-Item ".\package-lock.json" -Force }
+if (Test-Path ".\.next") { Remove-Item ".\.next" -Recurse -Force }
+"legacy-peer-deps=true" | Set-Content -Path ".\.npmrc" -Encoding UTF8
+npm install zod@^3.25.76
+npm install
+npm install --legacy-peer-deps `
+  @radix-ui/react-avatar `
+  @radix-ui/react-dialog `
+  @radix-ui/react-dropdown-menu `
+  @radix-ui/react-label `
+  @radix-ui/react-progress `
+  @radix-ui/react-select `
+  @radix-ui/react-separator `
+  @radix-ui/react-tabs `
+  @radix-ui/react-toast
+npm install --legacy-peer-deps lucide-react class-variance-authority clsx tailwind-merge
+npm install --legacy-peer-deps ai @ai-sdk/openai
+npm install --legacy-peer-deps date-fns recharts framer-motion
+npx shadcn@latest init --yes
+npx shadcn@latest add button card input label textarea select tabs dialog dropdown-menu avatar progress separator toast
+npm run dev

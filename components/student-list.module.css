@@ -1,0 +1,129 @@
+.emptyState {
+  padding: 3rem;
+  text-align: center;
+}
+
+.studentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.studentCard {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.studentCard:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.studentContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.studentHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.onlineIndicator {
+  position: absolute;
+  bottom: -0.25rem;
+  right: -0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #10b981;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.studentInfo {
+  flex: 1;
+}
+
+.studentName {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.studentSemester {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.125rem;
+}
+
+.studentStatus {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.studentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.university,
+.career {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.subjects,
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+.bio {
+  font-size: 0.875rem;
+  color: #374151;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.studentActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .studentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .studentActions {
+    flex-direction: column;
+  }
+}
